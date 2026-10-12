@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti, Sofia ❤️</title>
+    <!-- Conexión con Google Fonts para la letra Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- SECCIÓN 1: Portada o "Hero" -->
+    <header class="seccion-portada">
+        <h1>¡Hola, Sofia! <span class="corazon-latiendo">❤️</span></h1>
+        <p>Hice esto especialmente para ti. Desliza hacia abajo para empezar.</p>
+        <!-- Un pequeño icono o flecha indicando que baje -->
+        <div class="flecha">⬇</div>
+    </header>
+    
+    <section class="seccion-musica">
+        <h2>Musiquita de fondo</h2>
+        <p>Escucha esto mientras sigues bajando...</p>
+        <div class="contenedor-spotify">
+            <!-- Aquí pondremos el código de Spotify en la siguiente etapa -->
+             <div class="contenedor-spotify">
+            <!-- Pega tu código aquí. Se verá parecido a esto: -->
+           <div class="contenedor-spotify">
+            <!-- Pega tu código aquí. Se verá parecido a esto: -->
+             <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/10HOpE4BUFWSa9xHmcbDac?utm_source=generator&si=5e12e13e988349a2" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN 2: Nuestro primer mensaje -->
+    <section class="seccion-mensaje">
+        <h2>Unas palabritas para ti amorcito </h2>
+        <p>Amor mío, desde que Dios te trajo a mi vida todo tiene un sentido diferente. Te he entregado mi amor más sincero, esperando dejar en ti un poquito de lo mucho que tú has dejado en mí. Todo lo que hago lo hago soñando con nuestro futuro. A veces me cuesta escribir lo que siento, porque es abrumador, pero sentirlo es lo más sencillo del mundo... amarte fluye solo.</p>
+    </section>
+
+<!-- SECCIÓN 3: Galería de fotos -->
+    <section class="seccion-galeria">
+        <h2>Nuestros Momentos</h2>
+        <div class="carrusel-contenedor">
+            <div class="carrusel-pista">
+                <!-- Grupo 1 -->
+                <img src="img/foto 1.webp" alt="Foto 1">
+                <img src="img/foto 2.webp" alt="Foto 2">
+                <img src="img/foto 3.webp" alt="Foto 3">
+                <img src="img/foto 4.webp" alt="Foto 4">
+                <img src="img/foto 5.webp" alt="Foto 5">
+                <img src="img/foto 6.webp" alt="Foto 6">
+                <img src="img/foto 8.webp" alt="Foto 8">
+                <img src="img/foto 9.webp" alt="Foto 9">
+                <img src="img/foto 10.webp" alt="Foto 10">
+                <img src="img/foto 11.webp" alt="Foto 11">
+                
+                <!-- Grupo 2 (Copia exacta) -->
+                <img src="img/foto 1.webp" alt="Foto 1">
+                <img src="img/foto 2.webp" alt="Foto 2">
+                <img src="img/foto 3.webp" alt="Foto 3">
+                <img src="img/foto 4.webp" alt="Foto 4">
+                <img src="img/foto 5.webp" alt="Foto 5">
+                <img src="img/foto 6.webp" alt="Foto 6">
+                <img src="img/foto 8.webp" alt="Foto 8">
+                <img src="img/foto 9.webp" alt="Foto 9">
+                <img src="img/foto 10.webp" alt="Foto 10">
+                <img src="img/foto 11.webp" alt="Foto 11">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SECCIÓN 5: Mensaje Final -->
+    <section class="seccion-final">
+        <h2>Te quiero muchísimo</h2>
+        <p>Tu familia se ha vuelto parte de mi historia, los valoro y los quiero muchísimo. Y Basti... para él solo tengo amor incondicional. Deseo con el alma ser esa figura en la que él pueda apoyarse, en quien confíe plenamente, y que encuentre en mí el mejor ejemplo de cómo se ama a su mamá cada día de la vida.
+Cuento los días para que llegue el momento de casarnos y abrazar por completo esta familia que ya somos..</p>
+    </section>
+
+<!-- SECCIÓN 5: Generador de Razones -->
+    <section class="seccion-final">
+        <h2>Para terminar...</h2>
+        <p>Tengo algo más para ti. Toca el botón para descubrirlo.</p>
+        
+        <!-- Aquí aparecerán las razones una por una -->
+        <div id="contenedor-razon" class="oculto">
+            <h3 id="texto-razon"></h3>
+        </div>
+        
+        <!-- El botón mágico -->
+        <button id="boton-razones" class="boton-pinky">¿Por qué me encantas? 💖</button>
+    </section>
+
+    <!-- El "motor" del generador -->
+    <script>
+        // Aquí puedes escribir todas las razones que quieras entre comillas
+        const razones = [
+            "✨ Por cómo me miras cuando sonríes.",
+            "✨ Porque siempre me apoyas en mis estudios y proyectos.",
+            "✨ Por la forma tan linda en la que me haces reír.",
+            "✨ Porque me encanta pasar tiempo contigo, sin importar qué hagamos.",
+            "✨ Por tu ternura y paciencia conmigo.",
+            "✨ Porque eres mi persona favorita en el mundo, Sofia. ❤️"
+        ];
+
+        let indiceActual = 0;
+        const botonRazones = document.getElementById('boton-razones');
+        const contenedorRazon = document.getElementById('contenedor-razon');
+        const textoRazon = document.getElementById('texto-razon');
+
+        botonRazones.addEventListener('click', function() {
+            // Hacemos visible la cajita blanca si estaba oculta
+            if (contenedorRazon.classList.contains('oculto')) {
+                contenedorRazon.classList.remove('oculto');
+                contenedorRazon.classList.add('mostrar-razon');
+            }
+
+            // Cambiamos el texto por la razón actual
+            textoRazon.textContent = razones[indiceActual];
+
+            // Cambiamos el texto del botón
+            botonRazones.textContent = "¡Dime otra razón! 💕";
+
+            // Pasamos a la siguiente razón
+            indiceActual++;
+
+            // Si llegamos a la última, el botón cambia y reiniciamos el contador
+            if (indiceActual >= razones.length) {
+                indiceActual = 0; // Para que pueda volver a empezar
+                botonRazones.textContent = "Volver a leerlas todas 🔄";
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
+
+</body>
+</html>
